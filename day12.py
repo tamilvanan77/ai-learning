@@ -24,9 +24,21 @@ print(result)
 def get_high_performers(students):
     high=[]
     for student in students:
-        if students["marks"]>=80:
+        if student["marks"]>=80:
             high.append(student)
     return high
+def get_average_performers(students):
+    avg=[]
+    for student in students:
+        if 60<=student["marks"]<=79:
+            avg.append(student)
+    return avg
+def get_needs_improvement(students):
+    need=[]
+    for student in students:
+        if student["marks"]<60:
+            need.append(student)
+    return need
 
 students = [
     {"name": "Arun", "marks": 85},
@@ -38,6 +50,15 @@ students = [
 ]
 
 high=get_high_performers(students)
+avg=get_average_performers(students)
+need=get_needs_improvement(students)
+print("High Performers")
+for student in high:
+    print(student["name"],"-",student["marks"])
+print("Average Performers")
+for student in avg:
+    print(student["name"],"-",student["marks"])
+print("Needs Improvement")
+for student in need:
+    print(student["name"],"-",student["marks"])
 
-for key,value in high:
-    print
