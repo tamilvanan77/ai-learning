@@ -1,0 +1,16 @@
+| Function             | Purpose                | Example                   |
+| -------------------- | ---------------------- | ------------------------- |
+| `np.sum()`           | Total                  | `np.sum(marks)`           |
+| `np.mean()`          | Average                | `np.mean(marks)`          |
+| `np.max()`           | Highest                | `np.max(marks)`           |
+| `np.min()`           | Lowest                 | `np.min(marks)`           |
+| `np.median()`        | Middle value           | `np.median(marks)`        |
+| `np.std()`           | Standard deviation     | `np.std(marks)`           |
+| `np.var()`           | Variance               | `np.var(marks)`           |
+| `np.argmax()`        | Index of highest value | `np.argmax(marks)`        |
+| `np.argmin()`        | Index of lowest value  | `np.argmin(marks)`        |
+| `np.sort()`          | Sort values            | `np.sort(marks)`          |
+| `np.unique()`        | Remove duplicates      | `np.unique(marks)`        |
+| `np.count_nonzero()` | Count non-zero values  | `np.count_nonzero(marks)` |
+| `np.size()`          | Number of elements     | `np.size(marks)`          |
+| `np.shape()`         | Array dimensions       | `np.shape(marks)`         |
