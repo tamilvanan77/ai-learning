@@ -1,37 +1,44 @@
+#practice exercise
+
 import numpy as np
+marks = np.array([45, 72, 88, 31, 95, 64, 50, 81])
+high=marks[marks>=80]
+below=marks[marks<50]
+pass_count=marks[marks>=50]
+print(f"High        :{high}")
+print(f"Below       :{below}")
+print(f"Pass Count  :{len(pass_count)}")
 
-n = int(input("Enter number of students: "))
-subjects = 3
+#or
+print(f"Pass Count  :{np.size(pass_count)}")
 
-names = []
-marks = []
+#Small Project — NumPy Student Analyzer 2.0
 
-for i in range(n):
-    name = input(f"\nEnter student {i + 1} name: ")
-    names.append(name)
+import numpy as np
+marks = np.array([85, 32, 67, 91, 76, 100, 45, 58, 82, 73])
+total=len(marks)
+avg= marks[(marks >= 60) & (marks < 80)]
+high_perform=marks[marks>80]
+passed=marks[(marks >= 50) & (marks < 60)]
+fail=marks[marks<50]
+low=np.min(marks)
+highest=np.max(marks)
+pass_count=len(marks[marks>=50])
+fail_count=len(marks[marks<50])
+pass_per=(pass_count/total)*100
 
-    student_marks = []
+print("===== STUDENT PERFORMANCE ANALYSIS =====")
 
-    for j in range(subjects):
-        mark = float(input(f"Enter mark for Subject {j + 1}: "))
-        student_marks.append(mark)
+print(f"Total Students  : {total}")
+print(f"Average Marks   : {avg}")
+print(f"Highest Marks   : {highest}")
+print(f"Lowest Marks    : {low}")
 
-    marks.append(student_marks)
+print(f"Passed Marks    : {passed}")
+print(f"Failed Marks    : {fail}")
 
-marks_array = np.array(marks)
+print(f"High Performers : {high_perform}")
+print(f"Pass Count      : {pass_count}")
+print(f"Fail Count      : {fail_count}")
 
-print("\n===== STUDENT DETAILS =====")
-
-for i in range(n):
-    total = np.sum(marks_array[i])
-    average = np.mean(marks_array[i])
-    
-    print(f"\nName    : {names[i]}")
-    print(f"Marks   : {marks_array[i]}")
-    print(f"Total   : {total}")
-    print(f"Average : {average:.2f}")
-    print(f"Highest : {np.max(marks_array[i])}")
-    print(f"Lowest  : {np.min(marks_array[i])}")
-
-print("\n===== CLASS AVERAGE =====")
-print("Class Average:", np.mean(marks_array))
+print(f"Pass Percentage : {pass_per}")
