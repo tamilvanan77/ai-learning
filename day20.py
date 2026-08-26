@@ -1,5 +1,26 @@
-# Mini Project — Normalize Student Marks
 import numpy as np
+
+marks = np.array([40, 50, 60, 70, 80, 90, 100])
+
+minimum = np.min(marks)
+maximum = np.max(marks)
+
+normalized = (marks - minimum) / (maximum - minimum)
+
+print(normalized)
+
+#AI Uses Normalization
+#Short Practice
+
+marks = np.array([30, 40, 50, 60, 70, 80, 90])
+minimum = np.min(marks)
+maximum = np.max(marks)
+
+normalized = (marks - minimum) / (maximum - minimum)
+
+print(normalized)
+
+# Mini Project — Normalize Student Marks
 
 marks = np.array([
     [85, 78, 92],
