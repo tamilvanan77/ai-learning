@@ -1,33 +1,16 @@
-# Mini Project — Normalize Student Marks
-import numpy as np
+#Mini Project — Student Data Analysis
+import pandas as pd
+data={
+    "Name":["Arun","Bala","Kavi","Ravi","Priya","Deva"],
+    "Maths":[67,86,89,97,67,56],
+    "Python":[90,76,97,76,98,97],
+    "AI":[89,90,79,98,98,78]
+    }
+df=pd.DataFrame(data)
 
-marks = np.array([
-    [85, 78, 92],
-    [67, 88, 76],
-    [95, 91, 89],
-    [45, 52, 48],
-    [72, 69, 80],
-    [88, 84, 90]
-])
-names = np.array([
-    "Arun",
-    "Bala",
-    "Kavi",
-    "Ravi",
-    "Priya",
-    "Deva"
-])
+df["Average"] = df[["Maths", "Python", "AI"]].mean(axis=1)
+best = df["Average"].idxmax()
 
-highest = np.max(marks)
-lowest = np.min(marks)
-normalized = (marks - lowest) / (highest - lowest)
-normalized_avg = np.mean(normalized, axis=1)
-best = np.argmax(normalized_avg)
-
-print("Original Marks:")
-print(marks)
-
-print("\nNormalized Marks:")
-print(normalized.round(2))
-print(f"best student :{names[best]}")
-print(f"best Average :{np.mean(normalized_avg[best]):.2f}")
+print(df)
+print("Best Student:", df.loc[best, "Name"])
+print("Best Average:", df.loc[best, "Average"])
