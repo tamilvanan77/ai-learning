@@ -1,0 +1,36 @@
+using 2 like (x,y)axis graph chat condion
+chart name
+    plt.plot(axis name)   #Line chart
+    plt.bar(axis name)    #bar chart
+    plt.scatter(axis name) #scatter plot
+graph title
+    plt.title(...)
+show axis name
+    plt.xlabel(...)
+    plt.ylabel(...)
+graph show 
+    plt.show()
+
+using single axis x Or y 
+
+chart name
+    plt.hist  #histogrom
+
+
+seaborn is combination of matplotlip
+
+charts
+sns.scatterplot(
+    x="Hours",
+    y="Marks",
+    data=df
+)
+
+
+sns.barplot(x=students, y=marks)
+sns.boxplot(y=variable name)
+
+
+#usind data frame
+correlation = df.corr()
+sns.heatmap(correlation, annot=True)

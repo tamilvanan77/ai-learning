@@ -1,0 +1,16 @@
+1 . correlation
+
+correlation = np.corrcoef(a,b)
+
+2 . Dot Product
+
+For example:
+
+$$ A=[1,2,3] $$ $$ B=[4,5,6] $$
+
+The formula is:
+
+A⋅B=(1×4)+(2×5)+(3×6)
+=4+10+18=32
+
+prrint(np.Dot(a,b))
